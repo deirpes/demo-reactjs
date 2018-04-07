@@ -8,6 +8,13 @@ class Students
                 "age": 22,
                 "email": "s3520920@rmit.edu.vn",
                 "nationality": "Vietnam"
+            },
+            {
+                "id": 2,
+                "name": "Nguyen Quang Chien",
+                "age": 22,
+                "email": "s3520920@rmit.edu.vn",
+                "nationality": "Vietnam"
             }
         ];
     }
