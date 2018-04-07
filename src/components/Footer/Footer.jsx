@@ -4,7 +4,7 @@ import { Container } from "reactstrap";
 const Footer = () => (
     <div>
       <Container>
-        <span className="text-muted">Place sticky footer content here.</span>
+        <span className="text-muted">Footer @ Demo ReactJS</span>
       </Container>
     </div>
 )
