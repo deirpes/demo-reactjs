@@ -7,16 +7,15 @@ import { Title } from "components";
 class List extends Component {
     constructor() {
         super();
-        this.students = new Students();
-        this.state = {list: this.students.show()}
+        this.state = {list: Students.show()}
         this.deleteStudent = this.deleteStudent.bind(this);
     }
     
     deleteStudent(e) {
         let id = e.target.id;
         this.setState(prev => {
-            this.students.delete(id);
-            return {list: this.students.show()}
+            Students.delete(id);
+            return {list: Students.show()}
         });
     }
 
