@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Title } from "components";
+import Students from "models/Students/Students.jsx";
+import { Link, browserHistory } from "react-router";
 import {
     Form,
     FormGroup,
@@ -17,7 +19,13 @@ class Add extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        
+        Students.add({
+            name: this.name.value,
+            age: this.age.value,
+            email: this.email.value,
+            nationality: this.nationality.value
+        });
+        browserHistory.goBack();
     }
 
     render() {
@@ -59,6 +67,8 @@ class Add extends Component {
                     </FormGroup>
                     <Button color="primary">Submit</Button>
                 </Form>
+                <br />
+                <Link to="/students">{"<< Go back"}</Link>
             </div>
         )
     }
