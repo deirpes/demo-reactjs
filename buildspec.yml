@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - echo remove previous Build and Installing source NPM dependencies...
-      - aws s3 rm build.tar.gz
+      - aws s3 rm s3://${S3_BUCKET}/build.tar.gz
       - npm install
   build:
     commands:
