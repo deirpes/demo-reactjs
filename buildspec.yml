@@ -12,8 +12,8 @@ phases:
     commands:
       - tar czf build.tar.gz build/
       - aws s3 cp build.tar.gz s3://${S3_BUCKET}
-  artifacts:
-    files:
-      - build.tar.gz
-      - appspec.yml
-    discard-paths: yes
+artifacts:
+  files:
+    - build.tar.gz
+    - appspec.yml
+  discard-paths: yes
