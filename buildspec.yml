@@ -1,0 +1,19 @@
+version: 0.1
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+  post_build:
+    commands:
+      - tar czf build.tar.gz build/
+      - aws s3 cp build.tar.gz s3://${S3_BUCKET}
+  artifacts:
+    files:
+      - build.tar.gz
+      - appspec.yml
+    discard-paths: yes
